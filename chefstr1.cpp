@@ -22,7 +22,7 @@ typedef pair<int, int> pii;
 
 int main()
 {
-    int t, n, x;
+    int t, n;
     cin>>t;
     while(t--)
     {
@@ -40,4 +40,5 @@ int main()
         }
         cout<<res<<endl;
     }
+    return 0;
 }

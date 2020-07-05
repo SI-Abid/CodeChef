@@ -55,5 +55,18 @@ int main()
             }
             
         }
+        if(chef>morty)
+        {
+            cout<<"0 "<<chef<<endl;
+        }
+        else if(morty>chef)
+        {
+            cout<<"1 "<<morty<<endl;
+        }
+        else
+        {
+            cout<<"2 "<<chef<<endl;
+        }
     }
+    return 0;
 }
