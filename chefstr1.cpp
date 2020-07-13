@@ -19,26 +19,59 @@ typedef pair<int, int> pii;
 #define Revs(x)		reverse(s.begin(), x.end())
 #define mem(a,b)	memset(a, b, sizeof(a))
 #define two(i)		((ll)1<<i)
-
+void solve();
+void solve2();
 int main()
 {
+    solve2();
+    return 0;
+}
+void solve2()
+{
     int t, n;
+    ll aa;
     cin>>t;
     while(t--)
     {
         ll res=0;
         cin>>n;
-        int v[n];
+        ll v[n];
+        cin>>v[0];
+        for(int i=1; i<n; i++)
+        {
+            cin>>v[i];
+            aa = v[i-1] - v[i];
+            if(aa<0)
+                aa = -aa;
+            res+=(aa-1);
+        }
+        cout<<res<<endl;
+    }
+}
+void solve()
+{
+    int t, n;
+    ll aa;
+    cin>>t;
+    while(t--)
+    {
+        ll res=0;
+        cin>>n;
+        ll v[n];
         For(n)
         {
             cin>>v[i];
         }
         for(int i=0; i<n-1; i++)
         {
-            res+= max(v[i],v[i+1])-min(v[i],v[i+1]);
+            aa = v[i]-v[i+1];
+            
+            if(aa<0)
+                aa=-aa;
+            
+            res+=aa;
             res--;
         }
         cout<<res<<endl;
     }
-    return 0;
 }
