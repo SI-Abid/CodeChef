@@ -20,12 +20,12 @@ typedef pair<int, int> pii;
 #define mem(a,b)	memset(a, b, sizeof(a))
 #define two(i)		((ll)1<<i)
 
-int sumofdig(int n)
+ll sumofdig(ll n)
 {
-    int x=0;
-    while(n)
+    ll x=0;
+    while(n>0)
     {
-        x+=n%10;
+        x+=(n%10);
         n/=10;
     }
     return x;
@@ -33,21 +33,26 @@ int sumofdig(int n)
 
 int main()
 {
-    int t; cin>>t;
+    int t, n; 
+    cin>>t;
     while(t--)
     {
-        int n;
         cin>>n;
-        int chef=0, morty=0;
-        while(n--)
+        ll chef=0, morty=0;
+        for(int i=0;i<n;i++)
         {
-            int a, b;
+            ll a, b;
             cin>>a>>b;
-            if(sumofdig(a)>sumofdig(b))
+            ll aa = sumofdig(a);
+            ll bb = sumofdig(b);
+            if(aa>bb)
+            {
                 chef++;
-
-            else if(sumofdig(a)<sumofdig(b))
+            }
+            else if(bb>aa)
+            {
                 morty++;
+            }
             else
             {
                 chef++;
