@@ -3,12 +3,11 @@ using namespace std;
 
 int main()
 {
-    int n;
-    while(cin>>n)
-    {
-        if(n==42)
-            break;
-        cout<<n<<endl;
-    }
+    
     return 0;
+}
+{
+    "C++":"cpp17",
+    "NodeJS":"nodejs",
+    
 }
